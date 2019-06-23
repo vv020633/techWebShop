@@ -1,0 +1,34 @@
+/*Defining colorscheme*/
+
+$white: #FFFFFF;
+$light_black: #343434;
+$pitch_black: #000000;
+$black_alt: #1a1a1a;
+$grey: #C0C0C0;
+
+@mixin information($white){
+  color: $white;
+  font-size: 25px;
+}
+
+.container{
+  background-color: $white;
+  margin: auto;
+}
+
+.footer{
+  background-color: $black_alt;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.h1{
+  color: $light_black;
+}
+.h2{
+  color:$light_black;
+}
+
+
+.info{
+  @include information($white);
+}

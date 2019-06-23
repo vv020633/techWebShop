@@ -1,0 +1,26 @@
+/*Defining colorscheme*/
+.container {
+  background-color: #FFFFFF;
+  margin: auto;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.h1 {
+  color: #343434;
+}
+
+.h2 {
+  color: #343434;
+}
+
+.info {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=%5Bstyle.css%5D.map */
