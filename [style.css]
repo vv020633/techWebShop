@@ -1,13 +1,17 @@
 /*Defining colorscheme*/
-.container {
-  background-color: #FFFFFF;
-  margin: auto;
-}
-
 .footer {
   background-color: #1a1a1a;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.container {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 10% 25% auto 10%;
+  grid-template-rows: 10% auto 10%;
+  grid-template-areas: "header header header header" "sidebar main main sidebar" "footer footer footer footer";
+  align-items: center;
 }
 
 .h1 {

@@ -10,17 +10,33 @@ $grey: #C0C0C0;
   color: $white;
   font-size: 25px;
 }
+.header{
 
-.container{
-  background-color: $white;
-  margin: auto;
 }
+.main{
 
+}
+.sidebar{
+
+}
 .footer{
   background-color: $black_alt;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.container{
+  background-color: $white;
+  display: grid;
+  grid-template-columns:10% 25% auto 10%;
+  grid-template-rows:10% auto 10%;
+  grid-template-areas:
+  "header header header header"
+  "sidebar main main sidebar"
+  "footer footer footer footer";
+  align-items: center;
+}
+
+
 .h1{
   color: $light_black;
 }
