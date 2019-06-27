@@ -178,10 +178,21 @@
   grid-column-gap: 2px;
   grid-row-gap: 2px;
   background-color: #343434;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   /*Come back to this*/
   padding: 1em;
+  margin-bottom: 0;
+}
+
+.graygrid {
+  display: grid;
+  border-radius: 25px;
+  grid-area: 2/2/2/span 3;
+  background-color: #343434;
+  grid-template-columns: repeat(14, 1fr);
+  margin-top: 0;
+  height: 50px;
+  align-self: flex-start;
+  /*Come back to this*/
 }
 
 .home-title-grid {
@@ -193,7 +204,7 @@
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  grid-area: 2/2/2/2;
+  grid-area: 3/2/span 4/2;
   border-color: #1a1a1a;
 }
 
@@ -201,19 +212,12 @@
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  grid-area: 2/3/2/3;
+  grid-area: 3/3/span 4/3;
 }
 
 .sidebar-left {
   display: grid;
-  grid-area: 2/1/2/1;
-}
-
-.sidebar-right {
-  display: grid;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-area: 2/4/2/4;
+  grid-area: 3/1/span 4/1;
 }
 
 .footer {
@@ -223,19 +227,17 @@
   padding-bottom: 20px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  grid-area: 3/1/3/span 4;
+  grid-area: 4/1/4/span 4;
   border-radius: 25px;
 }
 
 .container {
   background-color: #FFFFFF;
   display: grid;
-  grid-template-columns: 0.5fr 2.5fr auto 0.5fr;
-  grid-template-rows: 1fr 8fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  /*Come back to this for responsive design*/
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: 2/8 minmax(50px, 100px) auto 1fr;
+  /*grid-auto-rows: minmax/*(100px, auto); /*Come back to this for responsive design*/
   align-items: center;
-  justify-content: stretch;
 }
 
 .fa-shopping-cart {
@@ -256,26 +258,16 @@
 }
 
 .grid-square2 {
-  background-color: #FFFFFF;
-  display: grid;
-  animation-name: grid-color;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
   grid-area: 1/3/1/3;
   animation-name: grid-color;
-  animation-duration: 4s;
+  animation-duration: 1.67s;
   animation-iteration-count: infinite;
 }
 
 .grid-square3 {
-  background-color: #FFFFFF;
-  display: grid;
-  animation-name: grid-color;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
   grid-area: 1/3/1/3;
   animation-name: grid-color;
-  animation-duration: 4s;
+  animation-duration: 3.04s;
   animation-iteration-count: infinite;
 }
 
@@ -284,7 +276,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/4/1/4;
 }
 
@@ -293,7 +285,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/5/1/5;
 }
 
@@ -302,7 +294,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/6/1/6;
 }
 
@@ -311,7 +303,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/7/1/7;
 }
 
@@ -320,7 +312,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/8/1/8;
 }
 
@@ -329,7 +321,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/9/1/9;
 }
 
@@ -338,7 +330,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/10/1/10;
 }
 
@@ -347,7 +339,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 1/11/1/11;
 }
 
@@ -356,15 +348,13 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/1/2/1;
 }
 
 .grid-square13 {
-  background-color: #FFFFFF;
-  display: grid;
   animation-name: grid-color;
-  animation-duration: 2s;
+  animation-duration: 3.09s;
   animation-iteration-count: infinite;
   grid-area: 2/2/2/2;
 }
@@ -374,7 +364,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/3/2/3;
 }
 
@@ -383,7 +373,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/4/2/4;
 }
 
@@ -392,15 +382,13 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/5/2/5;
 }
 
 .grid-square17 {
-  background-color: #FFFFFF;
-  display: grid;
   animation-name: grid-color;
-  animation-duration: 2s;
+  animation-duration: 4.15s;
   animation-iteration-count: infinite;
   grid-area: 2/6/2/6;
 }
@@ -410,7 +398,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/7/2/7;
 }
 
@@ -419,7 +407,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/8/2/8;
   animation-name: grid-color;
   animation-duration: 4s;
@@ -431,7 +419,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/9/2/9;
 }
 
@@ -440,7 +428,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/10/2/10;
   grid-area: 3/9/3/9;
   animation-name: grid-color;
@@ -453,7 +441,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/11/2/11;
   grid-area: 3/9/3/9;
   animation-name: grid-color;
@@ -466,7 +454,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/12/2/12;
 }
 
@@ -475,10 +463,10 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/13/2/13;
   grid-area: 3/9/3/9;
-  animation-name: grid-color;
+  animation-name: grid-color-static;
   animation-duration: 3.9;
   animation-iteration-count: infinite;
 }
@@ -488,7 +476,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 2/14/2/14;
 }
 
@@ -497,7 +485,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/1/3/1;
 }
 
@@ -506,7 +494,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/2/3/2;
 }
 
@@ -515,7 +503,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/3/3/3;
   animation-name: grid-color;
   animation-duration: 2.6s;
@@ -527,7 +515,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/4/3/4;
 }
 
@@ -536,7 +524,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/5/3/5;
 }
 
@@ -545,7 +533,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/6/3/6;
   grid-area: 3/9/3/9;
   animation-name: grid-color;
@@ -558,7 +546,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/7/3/7;
 }
 
@@ -567,7 +555,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/8/3/8;
 }
 
@@ -576,7 +564,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/9/3/9;
   animation-name: grid-color;
   animation-duration: 3.3s;
@@ -588,7 +576,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/10/3/10;
 }
 
@@ -597,7 +585,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/11/3/11;
 }
 
@@ -606,7 +594,7 @@
   display: grid;
   animation-name: grid-color;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   grid-area: 3/12/3/12;
 }
 
