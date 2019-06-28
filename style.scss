@@ -11,39 +11,39 @@ $radius: 25px;
   color: $white;
   font-size: 25px;
 }
-@mixin header-grid-info($white){
+@mixin   grid-info($white){
   background-color: $white;
   display: grid;
-  animation-name: grid-color;
+  animation-name: grid-color-up;
   animation-duration: 2s;
   animation-iteration-count: 1;
 
 }
-@keyframes grid-color{
-  0% {background-color: $light_black; transform:scale(1.1); padding:1em;}
-  5% {background-color: #3d3d3d;  transform:scale(1.12); padding:1em; }
-  10% {background-color: #474747;  transform:scale(1.13); padding:1em; }
-  15% {background-color: #515151; transform:scale(1.14); padding:1em; }
-  20% {background-color: #686767;  transform:scale(1.15); padding:1em;}
-  25% {background-color: #6d6d6d;  transform:scale(1.16); padding:1em;}
-  30% {background-color: #777777;  transform:scale(1.17); padding:1em;}
-  35% {background-color: #848484;  transform:scale(1.18); padding:1em;}
-  40% {background-color: #8e8e8e;  transform:scale(1.19); padding:1em;}
-  45% {background-color: #9e9e9e;  transform:scale(1.2); padding:1em;}
-  50% {background-color: #a3a3a3; transform:scale(1.25); padding:1em; }
-  55% {background-color: #a8a8a8;  transform:scale(1.3); padding:1em;}
-  60% {background-color: #adadad;  transform:scale(1.35); padding:1em;}
-  65% {background-color: #b7b7b7;  transform:scale(1.36); padding:1em;}
-  70% {background-color: #bfbfbf;  transform:scale(1.37); padding:1em;}
-  75% {background-color: #c1c1c1;  transform:scale(1.38); padding:1em;}
-  80% {background-color: #c9c9c9;  transform:scale(1.39); padding:1em;}
-  85% {background-color: #d8d8d8;  transform:scale(1.4); padding:1em;}
-  90% {background-color: #dddddd;  transform:scale(1.41); padding:1em;}
-  95% {background-color: #f2f2f2;  transform:scale(1.42); padding:1em;}
-  100% {background-color: #ffffff;  transform:scale(1.45); padding:1em;}
+@keyframes grid-color-up{
+  0% {background-color: $light_black;    transform: translate(0px, -1px);}
+  5% {background-color: #3d3d3d;      transform: translate(0px, -3px);}
+  10% {background-color: #474747;      transform: translate(0px, -6px);}
+  15% {background-color: #515151;     transform: translate(0px, -9px);}
+  20% {background-color: #686767;      transform: translate(0px, -12px);}
+  25% {background-color: #6d6d6d;      transform: translate(0px, -15px);}
+  30% {background-color: #777777;      transform: translate(0px, -18px);}
+  35% {background-color: #848484;      transform: translate(0px, -21px);}
+  40% {background-color: #8e8e8e;      transform: translate(0px, -24px);}
+  45% {background-color: #9e9e9e;      transform: translate(0px, -27px);}
+  50% {background-color: #a3a3a3;     transform: translate(0px, -30px);}
+  55% {background-color: #a8a8a8;     transform: translate(0px, -33px);}
+  60% {background-color: #adadad;      transform: translate(0px, -36px);}
+  65% {background-color: #b7b7b7;      transform: translate(0px, -39px);}
+  70% {background-color: #bfbfbf;      transform: translate(0px, -42px);}
+  75% {background-color: #c1c1c1;      transform: translate(0px, -45px);}
+  80% {background-color: #c9c9c9;     transform: translate(0px, -46px);}
+  85% {background-color: #d8d8d8; }
+  90% {background-color: #dddddd; }
+  95% {background-color: #f2f2f2;}
+  100% {background-color: #ffffff;}
 }
 
-@keyframes grid-color-static{
+@keyframes grid-color-up-static{
   0% {background-color: $light_black; }
   5% {background-color: #3d3d3d;  }
   10% {background-color: #474747; }
@@ -67,6 +67,50 @@ $radius: 25px;
   100% {background-color: #ffffff; }
 }
 
+@keyframes   grid-color-migrate-right{
+  0% {background-color: $light_black; }
+  5% {background-color: #3d3d3d; transform: translate(1px, -1px);}
+  10% {background-color: #474747; transform: translate(3px, -3px);}
+  15% {background-color: #515151; transform: translate(6px, -6px);}
+  20% {background-color: #686767; transform: translate(9px, -9px);}
+  25% {background-color: #6d6d6d; transform: translate(12px, -12px);}
+  30% {background-color: #777777; transform: translate(15px, -15px);}
+  35% {background-color: #848484; transform: translate(18px, -18px);}
+  40% {background-color: #8e8e8e;  transform: translate(21px, -21px);}
+  45% {background-color: #9e9e9e;  transform: translate(24px, -24px);}
+  50% {background-color: #a3a3a3; transform: translate(27px, -27px);}
+  55% {background-color: #a8a8a8;  transform: translate(30px, -30px);}
+  60% {background-color: #adadad;  transform: translate(33px, -33px);}
+  65% {background-color: #b7b7b7;  transform: translate(36px, -36px);}
+  70% {background-color: #bfbfbf; transform: translate(39px, -39px);}
+  75% {background-color: #c1c1c1; transform: translate(42px, -42px);}
+  80% {background-color: #c9c9c9; }
+  85% {background-color: #d8d8d8; }
+  90% {background-color: #dddddd; }
+  95% {background-color: #f2f2f2; }
+}
+@keyframes   grid-color-migrate-left{
+  0% {background-color: $light_black; }
+  5% {background-color: #3d3d3d; transform: translate(1px, 1px);}
+  10% {background-color: #474747; transform: translate(3px, 3px);}
+  15% {background-color: #515151; transform: translate(6px, 6px);}
+  20% {background-color: #686767; transform: translate(9px, 9px);}
+  25% {background-color: #6d6d6d; transform: translate(12px, 12px);}
+  30% {background-color: #777777; transform: translate(15px, 15px);}
+  35% {background-color: #848484; transform: translate(18px, 18px);}
+  40% {background-color: #8e8e8e;  transform: translate(21px, 21px);}
+  45% {background-color: #9e9e9e;  transform: translate(24px, 24px);}
+  50% {background-color: #a3a3a3; transform: translate(27px, 27px);}
+  55% {background-color: #a8a8a8;  transform: translate(30px, 30px);}
+  60% {background-color: #adadad;  transform: translate(33px, 33px);}
+  65% {background-color: #b7b7b7;  transform: translate(36px, 36px);}
+  70% {background-color: #bfbfbf; transform: translate(39px, 39px);}
+  75% {background-color: #c1c1c1; transform: translate(42px, 42px);}
+  80% {background-color: #c9c9c9; }
+  85% {background-color: #d8d8d8; }
+  90% {background-color: #dddddd; }
+  95% {background-color: #f2f2f2; }
+}
 
 
 
@@ -81,11 +125,11 @@ padding: 1em;
 margin-bottom:0;
 }
 
+
 .graygrid{
   display: grid;
   border-radius: $radius;
   grid-area: 2/2/2/span 3;
-  background-color: $light_black;
   grid-template-columns: repeat(14, 1fr);
   margin-top: 0;
   height: 50px;
@@ -133,12 +177,14 @@ grid-area: 3/1/span 4/1;
   grid-row-gap: 0px;
   grid-area: 4/1/4/span 4;
   border-radius: $radius;
+
+  margin-bottom: 0;
 }
 .container{
   background-color: $white;
   display: grid;
   grid-template-columns:0.5fr 1fr 1fr;
-  grid-template-rows: 2/8 minmax(50px,100px) auto 1fr ;
+  grid-template-rows: 2/8 minmax(50px,200px) auto 1/8 ;
 /*grid-auto-rows: minmax/*(100px, auto); /*Come back to this for responsive design*/
   align-items: center;
 
@@ -154,191 +200,390 @@ grid-area: 3/1/span 4/1;
   display: grid;
 }
 .grid-square1{
-
+@include   grid-info($white);
 grid-area: 1/2/1/2;
-animation-name: grid-color-static;
+animation-name: grid-color-migrate-right;
 animation-duration: 4s;
 animation-iteration-count: infinite;
 }
 
 .grid-square2{
+  @include   grid-info($white);
   grid-area: 1/3/1/3;
-  animation-name: grid-color;
+  animation-name: grid-color-up;
   animation-duration: 1.67s;
   animation-iteration-count: infinite;
 }
 .grid-square3{
+  @include   grid-info($white);
   grid-area: 1/3/1/3;
-  animation-name: grid-color;
+  animation-name: grid-color-migrate-left;
   animation-duration: 3.04s;
   animation-iteration-count: infinite;
 }
 .grid-square4{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area: 1/4/1/4;
+    animation-name:   grid-color-migrate-right;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
 }
 .grid-square5{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area: 1/5/1/5;
+    animation-name:   grid-color-up;
+    animation-iteration-count: infinite;
+    animation-duration: 2.01s;
 }
 .grid-square6{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area: 1/6/1/6;
+    animation-name:   grid-color-migrate-right;
+    animation-iteration-count: infinite;
+    animation-duration: 3.2s;
 }
 .grid-square7{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:1/7/1/7;
+    animation-name:   grid-color-migrate-left;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
 }
 .grid-square8{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:1/8/1/8;
+    animation-name:   grid-color-up;
+    animation-iteration-count: infinite;
+    animation-duration: 1.3s;
 }
 .grid-square9{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:1/9/1/9;
+    animation-name:   grid-color-migrate-right;
+    animation-iteration-count: infinite;
+    animation-duration: 2.2s;
 }
 .grid-square10{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:1/10/1/10;
+    animation-name:   grid-color-migrate-left;
+    animation-iteration-count: infinite;
+    animation-duration: 2.03;
 }
 .grid-square11{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:1/11/1/11;
+    animation-name:   grid-color-up;
+    animation-iteration-count: infinite;
+    animation-duration: 1.04s;
 }
 .grid-square12{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/1/2/1;
+    animation-name:   grid-color-migrate-right;
+    animation-iteration-count: infinite;
+    animation-duration: 2.7s;
 }
 .grid-square13{
-    animation-name: grid-color;
+  @include grid-info ( $white);
+    animation-name: grid-color-migrate-left;
     animation-duration: 3.09s;
     animation-iteration-count: infinite;
     grid-area:2/2/2/2;
 }
 
 .grid-square14{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/3/2/3;
+    animation-name: grid-color-up;
+    animation-duration: 1.05;
+    animation-iteration-count: infinite;
 }
 .grid-square15{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/4/2/4;
+    animation-name: grid-color-migrate-right;
+    animation-duration: 2.6s;
+    animation-iteration-count: infinite;
 }
 .grid-square16{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/5/2/5;
+    animation-name: grid-color-up;
+    animation-duration: 2.6s;
+    animation-iteration-count: infinite;
 }
 .grid-square17{
-  animation-name: grid-color;
+  @include grid-info($white);
+  animation-name: grid-color-migrate-left;
   animation-duration: 4.15s;
   animation-iteration-count: infinite;
     grid-area:2/6/2/6;
 }
 
 .grid-square18{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/7/2/7;
+    animation-name: grid-color-up;
+    animation-duration: 2.97s;
+    animation-iteration-count: infinite;
 }
 .grid-square19{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/8/2/8;
-    animation-name: grid-color;
+    animation-name: grid-color-migrate-right;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
 .grid-square20{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/9/2/9;
+    animation-name: grid-color-migrate-left;
+    animation-duration: 4.09s;
+    animation-iteration-count: infinite;
 }
 .grid-square21{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/10/2/10;
     grid-area:3/9/3/9;
-    animation-name: grid-color;
+    animation-name: grid-color-up;
     animation-duration: 3.8s;
     animation-iteration-count: infinite;
 }
 .grid-square22{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/11/2/11;
     grid-area:3/9/3/9;
-    animation-name: grid-color;
+    animation-name: grid-color-up;
     animation-duration: 3.6s;
     animation-iteration-count: infinite;
 }
 .grid-square23{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/12/2/12;
+    animation-name: grid-color-up;
+    animation-duration: 5.09s;
+    animation-iteration-count: infinite;
 }
 .grid-square24{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/13/2/13;
     grid-area:3/9/3/9;
-    animation-name: grid-color-static;
+    animation-name: grid-color-migrate-right-right;
     animation-duration: 3.9;
     animation-iteration-count: infinite;
 }
 .grid-square25{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:2/14/2/14;
+    animation-name: grid-color-up;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
 }
 .grid-square26{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:3/1/3/1;
+    animation-name: grid-color-up;
+    animation-duration: 3.3s;
+    animation-iteration-count: infinite;
 }
 .grid-square27{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:3/2/3/2;
+    animation-name: grid-color-migrate-left;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
 }
 .grid-square28{
-  @include header-grid-info($white);
+  @include   grid-info($white);
   grid-area:3/3/3/3;
-  animation-name: grid-color;
+  animation-name: grid-color-up;
   animation-duration: 2.6s;
   animation-iteration-count: infinite;
 }
 .grid-square29{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:3/4/3/4;
 }
 .grid-square30{
-  @include header-grid-info($white);
+  @include   grid-info($white);
+  animation-name: grid-color-up;
+  animation-duration: 3.67s;
+  animation-iteration-count: infinite;
   grid-area:3/5/3/5;
 }
 .grid-square31{
-  @include header-grid-info($white);
+  @include   grid-info($white);
     grid-area:3/6/3/6;
     grid-area:3/9/3/9;
-    animation-name: grid-color;
+    animation-name: grid-color-up;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
 }
 .grid-square32{
-  @include header-grid-info($white);
+  @include   grid-info($white);
+  animation-name: grid-color-up;
+  animation-duration: 3.09s;
+  animation-iteration-count: infinite;
     grid-area:3/7/3/7;
 }
 .grid-square33{
-  @include header-grid-info($white);
+  @include   grid-info($white);
+  animation-name: grid-color-up;
+  animation-duration: 3.003s;
+  animation-iteration-count: infinite;
     grid-area:3/8/3/8;
 }
 .grid-square34{
-  @include header-grid-info($white);
+  @include   grid-info($white);
   grid-area:3/9/3/9;
-  animation-name: grid-color;
-  animation-duration: 3.3s;
+  animation-name: grid-color-up;
+  animation-duration: 4.1;
   animation-iteration-count: infinite;
 }
 .grid-square35{
-  @include header-grid-info($white);
+  @include   grid-info($white);
+  animation-name: grid-color-migrate-right-right;
+  animation-duration: 3.82s;
+  animation-iteration-count: infinite;
   grid-area:3/10/3/10;
 }
 .grid-square36{
-  @include header-grid-info($white);
+  @include   grid-info($white);
   grid-area:3/11/3/11;
+  animation-name: grid-color-migrate-right-right;
+  animation-duration: 3.9;
+  animation-iteration-count: infinite;
 }
+
+
 .grid-square37{
-  @include header-grid-info($white);
+  @include   grid-info($white);
   grid-area:3/12/3/12;
+  animation-name: grid-color-up;
+  animation-duration: 2.6s;
+  animation-iteration-count: infinite;
+}
+.grid-square38{
+  @include   grid-info($white);
+  grid-area:3/13/3/13;
+  animation-name: grid-color-up;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.grid-square39{
+  @include   grid-info($white);
+  grid-area:3/14/3/14;
+  animation-name: grid-color-up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.grid-square39{
+  @include   grid-info($white);
+  grid-area:1/14/1/14;
+  animation-name: grid-color-up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.grid-square40{
+  @include   grid-info($white);
+  grid-area:4/1/4/1;
+  animation-name: grid-color-up;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+.grid-square41{
+  @include   grid-info($white);
+  grid-area:4/2/4/2;
+  animation-name: grid-color-migrate-left;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+}
+.grid-square42{
+  @include   grid-info($white);
+  grid-area:4/3/4/3;
+  animation-name: grid-color-migrate-right;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+}
+.grid-square43{
+  @include   grid-info($white);
+  grid-area:4/5/4/5;
+  animation-name: grid-color-up;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+.grid-square44{
+  @include   grid-info($white);
+  grid-area:4/6/4/6;
+  animation-name: grid-color-migrate-left;
+  animation-duration: 3.02s;
+  animation-iteration-count: infinite;
+}
+.grid-square45{
+  @include   grid-info($white);
+  grid-area:4/7/4/7;
+  animation-name: grid-color-migrate-right;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+.grid-square46{
+  @include   grid-info($white);
+  grid-area:4/8/4/8;
+  animation-name: grid-color-up;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+}
+.grid-square47{
+  @include   grid-info($white);
+  grid-area:4/8/4/8;
+  animation-name: grid-color-migrate-left;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+}
+.grid-square48{
+  @include   grid-info($white);
+  grid-area:4/9/4/9;
+  animation-name: grid-color-migrate-right;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.grid-square49{
+  @include   grid-info($white);
+  grid-area:4/10/4/10;
+  animation-name: grid-color-up;
+  animation-duration: 1.9s;
+  animation-iteration-count: infinite;
+}
+.grid-square50{
+  @include   grid-info($white);
+  grid-area:4/11/4/11;
+  animation-name: grid-color-migrate-left;
+  animation-duration: 2.3;
+  animation-iteration-count: infinite;
+}
+.grid-square51{
+  @include   grid-info($white);
+  grid-area:4/12/4/12;
+  animation-name: grid-color-migrate-right;
+  animation-duration: 3.04s;
+  animation-iteration-count: infinite;
+}
+.grid-square52{
+  @include   grid-info($white);
+  grid-area:4/13/4/13;
+  animation-name: grid-color-up;
+  animation-duration: 2.22s;
+  animation-iteration-count: infinite;
+}
+.grid-square53{
+  @include   grid-info($white);
+  grid-area:4/14/4/14;
+  animation-name: grid-color-left;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
 }
 
 .header-second-row{
