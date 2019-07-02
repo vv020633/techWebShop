@@ -379,6 +379,7 @@
   display: grid;
 }
 
+/*CSS Grid spaces used to create homepage animation. All for that techwear flex*/
 .grid-square1 {
   background-color: #FFFFFF;
   display: grid;
@@ -1034,6 +1035,42 @@ h1 {
 
 h2 {
   color: #343434;
+}
+
+.home-links-container {
+  margin-top: 40px;
+}
+
+/*Removes the "decoration" AKA the underline and assigns their position to relative*/
+h2 > a {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+}
+
+/*Sets the hight for the underline, position, content left empty, and animation to ease underline */
+/*Visibility set as a backup method*/
+h2 > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  visibility: hidden;
+  -webkit-tranform: scaleX(0);
+  transform: scaleX(0);
+  -web-kit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* On hover the before AKA the underline becomes visible and transforms.*/
+/*webkit included to account for browsers that don't support transform*/
+h2 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .logo {
