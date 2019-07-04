@@ -310,6 +310,7 @@
   /*Come back to this*/
   padding: 1em;
   margin-bottom: 0;
+  position: fiex;
 }
 
 .graygrid {
@@ -351,16 +352,17 @@
 .footer {
   display: grid;
   background-color: #1a1a1a;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-area: 4/1/4/span 4;
   border-radius: 25px;
   margin-bottom: 0;
+  bottom: 0;
 }
 
-.container {
+.main-container {
   background-color: #FFFFFF;
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr;
@@ -369,14 +371,35 @@
   align-items: center;
 }
 
-.fa-shopping-cart {
-  color: #FFFFFF;
+/*.fa shop{
+  color: $white;
   display: grid;
-}
-
+}*/
 .shopping-cart-grid {
   grid-area: 1/12/1/12;
-  display: grid;
+  align-self: center;
+}
+
+.cart-counter {
+  visibility: hidden;
+}
+
+#lblCartCount {
+  font-size: 12px;
+  background: #ff0000;
+  color: #FFFFFF;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+  border-radius: 30px;
+}
+
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
 }
 
 /*CSS Grid spaces used to create homepage animation. All for that techwear flex*/
@@ -1029,16 +1052,27 @@
   animation-iteration-count: infinite;
 }
 
+.info-link-container {
+  position: relative;
+  border-bottom: 2px solid #000000;
+  width: 50%;
+}
+
+.info-link {
+  vertical-align: bottom;
+  margin-bottom: 0;
+}
+
+.home-links-container {
+  margin-top: 30%;
+}
+
 h1 {
   color: #FFFFFF;
 }
 
 h2 {
   color: #343434;
-}
-
-.home-links-container {
-  margin-top: 40px;
 }
 
 /*Removes the "decoration" AKA the underline and assigns their position to relative*/

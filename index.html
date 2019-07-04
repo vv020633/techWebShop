@@ -1,21 +1,22 @@
 <!DOCTYPE html5>
 <html>
 
-<head>
-   <meta charset="utf-8">
+<html lang="en" dir="ltr">
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
    <!--Icon Library-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-   <link rel="stylesheet" type = "text/css" href="[style.css]">
+   <!-- Bootstrap -->
+   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" type = "text/css" href="[style.css]">
 
 
    <title>/BackSlash Utilities/</title>
 </head>
 
-<body class="container">
+<body class="main-container">
   <img src="Logo.jpg" class="logo" alt="BackSlash Utilities Logo">
     <div class="header">
       <div class="home-title-grid">
@@ -23,14 +24,14 @@
       </div>
 
       <div class="shopping-cart-grid">
-        <ul class ="navbar-right">
 
-          <li><a href="#" id="cart">
-            <i class="fa fa-shopping-cart" style="font-size:300%;"></i>
-            <span class="badge"></span>
-              </a>
-          </li>
-        </ul>
+
+            <i class="fa fa-2x" style="color: #ffffff; ">&#xf07a;</i>
+            <span class="cart-counter">
+              <span class="badge badge-warning" id = "lblCartCount">5</span>
+            </span>
+
+
       </div>
     </div>
 
@@ -189,7 +190,9 @@
 
       <br>
       <div class ="home-links-container">
-        <h2>Info</h2>
+        <div class ="info-link-container">
+          <h2 class="info-link">Info</h2>
+        </div>
         <h2 class="home-links"><a href="#">Shipping & Returns</a></h3>
         <h2 class="home-links"><a href="#">About</a></h3>
         <h2 class="home-links"><a href="#">Contact</a></h3>
@@ -204,6 +207,9 @@
   </main>
 
   <footer class = "footer">
+    <div>
+
+    </div>
     <div class="footer-left">
       <!--Copyright-->
       <p class = "info">&copy2019 BackSlash Utilities Official Online Store</p>
